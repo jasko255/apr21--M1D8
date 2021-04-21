@@ -11,6 +11,8 @@
                     document.getElementById('myTaskList').appendChild(newLi)
                     let myLiis = document.getElementsByTagName('li')
                     newLi.innerText = userInput
+                    userInput.innerHTML = ' '
+
                         
                 }
 
@@ -45,8 +47,11 @@
 
                let getTasksAsArray = function(){
                 let myArr = document.getElementsByTagName('li')
+                for(let i =0; i< myArr.length;i++){
+                    console.log(myArr[i].innerText);
+                }
 
-                console.log(myArr);
+                
 
                }
                console.log(getTasksAsArray());
@@ -54,6 +59,11 @@
                Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
                onchange event listener ad applies it as background to every list item
             */
+           let changeTaskBackgroundColor = function(){
+               let userColor = document.getElementById('colorPicker').value
+               document.querySelector('body').style.backgroundColor = userColor
+
+           }
 
       /* EXTRA */
 
